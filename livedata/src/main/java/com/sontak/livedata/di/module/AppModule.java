@@ -1,6 +1,11 @@
 package com.sontak.livedata.di.module;
 
+import android.content.Context;
+
+import javax.inject.Named;
+
 import dagger.Module;
+import dagger.Provides;
 
 /**
  * @package: com.sontak.livedata.di.module
@@ -11,4 +16,16 @@ import dagger.Module;
  */
 @Module
 public class AppModule {
+
+    private final Context mAppContext;
+
+    public AppModule(Context context) {
+        this.mAppContext = context;
+    }
+
+    @Named("AppContext")
+    @Provides
+    public Context provideContext() {
+        return mAppContext;
+    }
 }

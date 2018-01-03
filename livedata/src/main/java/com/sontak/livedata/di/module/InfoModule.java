@@ -1,6 +1,15 @@
 package com.sontak.livedata.di.module;
 
+import android.content.Context;
+
+import com.sontak.livedata.database.InfoDao;
+import com.sontak.livedata.database.InfoDao_Impl;
+import com.sontak.livedata.database.InfoDatabase;
+
+import javax.inject.Named;
+
 import dagger.Module;
+import dagger.Provides;
 
 /**
  * @package: com.sontak.livedata.di.module
@@ -11,4 +20,10 @@ import dagger.Module;
  */
 @Module
 public class InfoModule {
+
+    @Named("InfoDao")
+    @Provides
+    InfoDao provideInfoDao(@Named("AppContext") Context context) {
+        return new InfoDao_Impl(InfoDatabase.getInstance(context));
+    }
 }

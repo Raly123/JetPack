@@ -1,7 +1,14 @@
 package com.sontak.livedata.di.component;
 
+import android.content.Context;
+
+import com.sontak.livedata.database.InfoDao;
 import com.sontak.livedata.di.module.AppModule;
 import com.sontak.livedata.di.module.HttpModule;
+import com.sontak.livedata.di.module.InfoModule;
+import com.sontak.livedata.network.NewsApi;
+
+import javax.inject.Named;
 
 import dagger.Component;
 
@@ -14,6 +21,15 @@ import dagger.Component;
  */
 @Component(modules = {
         AppModule.class,
-        HttpModule.class})
+        HttpModule.class,
+        InfoModule.class})
 public interface AppComponent {
+
+    @Named("AppContext")
+    Context context();
+
+    @Named("InfoDao")
+    InfoDao infoDao();
+
+    NewsApi newsApi();
 }
