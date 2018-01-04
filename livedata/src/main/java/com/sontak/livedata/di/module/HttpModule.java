@@ -1,6 +1,6 @@
 package com.sontak.livedata.di.module;
 
-import com.sontak.livedata.network.NewsApi;
+import com.sontak.livedata.data.network.NewsApi;
 
 import java.util.concurrent.TimeUnit;
 

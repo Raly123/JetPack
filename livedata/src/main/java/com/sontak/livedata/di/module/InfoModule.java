@@ -2,9 +2,11 @@ package com.sontak.livedata.di.module;
 
 import android.content.Context;
 
-import com.sontak.livedata.database.InfoDao;
-import com.sontak.livedata.database.InfoDao_Impl;
-import com.sontak.livedata.database.InfoDatabase;
+import com.sontak.livedata.data.database.InfoDao;
+import com.sontak.livedata.data.database.InfoDao_Impl;
+import com.sontak.livedata.data.database.InfoDatabase;
+import com.sontak.livedata.di.DiConfig;
+import com.sontak.livedata.di.scope.ContextScope;
 
 import javax.inject.Named;
 
@@ -23,7 +25,7 @@ public class InfoModule {
 
     @Named("InfoDao")
     @Provides
-    InfoDao provideInfoDao(@Named("AppContext") Context context) {
+    InfoDao provideInfoDao(@ContextScope(DiConfig.CONTEXT_SCOPE_APP) Context context) {
         return new InfoDao_Impl(InfoDatabase.getInstance(context));
     }
 }

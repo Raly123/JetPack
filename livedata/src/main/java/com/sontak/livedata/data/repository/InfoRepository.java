@@ -1,13 +1,13 @@
-package com.sontak.livedata.repository;
+package com.sontak.livedata.data.repository;
 
 import android.arch.lifecycle.LiveData;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.sontak.livedata.database.InfoDao;
-import com.sontak.livedata.database.NewsBean;
+import com.sontak.livedata.data.database.InfoDao;
+import com.sontak.livedata.data.database.NewsBean;
 import com.sontak.livedata.model.InfoBean;
-import com.sontak.livedata.network.NewsApi;
+import com.sontak.livedata.data.network.NewsApi;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import rx.Subscriber;
 import rx.schedulers.Schedulers;
 
 /**
- * @package: com.sontak.livedata.repository
+ * @package: com.sontak.livedata.data.repository
  * @author: Lei
  * @date: 2018-01-01 22:28
  * @version: V1.0.0

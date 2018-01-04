@@ -1,4 +1,4 @@
-package com.sontak.livedata.network;
+package com.sontak.livedata.data.network;
 
 import com.sontak.livedata.model.InfoBean;
 
@@ -6,7 +6,7 @@ import retrofit2.http.GET;
 import rx.Observable;
 
 /**
- * @package: com.sontak.livedata.network
+ * @package: com.sontak.livedata.data.network
  * @author: Lei
  * @date: 2018-01-01 23:20
  * @version: V1.0.0

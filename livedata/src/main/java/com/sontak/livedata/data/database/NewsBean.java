@@ -1,10 +1,10 @@
-package com.sontak.livedata.database;
+package com.sontak.livedata.data.database;
 
 import android.arch.persistence.room.Entity;
 import android.support.annotation.NonNull;
 
 /**
- * @package: com.sontak.livedata.database
+ * @package: com.sontak.livedata.data.database
  * @author: Lei
  * @date: 2018-01-01 22:30
  * @version: V1.0.0

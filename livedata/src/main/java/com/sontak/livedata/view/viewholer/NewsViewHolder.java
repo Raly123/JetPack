@@ -4,10 +4,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 import com.sontak.livedata.R;
-import com.sontak.livedata.database.NewsBean;
+import com.sontak.livedata.data.database.NewsBean;
+import com.sontak.livedata.data.glide.GlideApp;
 
 /**
  * @package: com.sontak.livedata.view.viewholer
@@ -31,11 +31,12 @@ public class NewsViewHolder extends BaseViewHolder<NewsBean> {
 
     @Override
     public void setData(NewsBean newsBean) {
-        Glide.with(getContext())
+        GlideApp.with(getContext())
                 .load(newsBean.getPicUrl())
                 .placeholder(R.drawable.ic_launcher_background)
-                .centerCrop()
+                .fitCenter()
                 .into(imageView);
+        
         title.setText(newsBean.getTitle());
         content.setText(newsBean.getCtime());
     }

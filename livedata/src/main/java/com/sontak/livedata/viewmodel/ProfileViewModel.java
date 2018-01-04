@@ -3,8 +3,8 @@ package com.sontak.livedata.viewmodel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
 
-import com.sontak.livedata.database.NewsBean;
-import com.sontak.livedata.repository.InfoRepository;
+import com.sontak.livedata.data.database.NewsBean;
+import com.sontak.livedata.data.repository.InfoRepository;
 
 import java.util.List;
 
@@ -23,7 +23,6 @@ public class ProfileViewModel extends ViewModel {
 
     @Inject
     public ProfileViewModel(InfoRepository repository) {
-
         this.mRepository = repository;
     }
 

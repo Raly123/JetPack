@@ -1,8 +1,14 @@
 package com.sontak.livedata.di.module;
 
+import android.app.Application;
 import android.content.Context;
 
+import com.sontak.livedata.BasicApp;
+import com.sontak.livedata.di.DiConfig;
+import com.sontak.livedata.di.scope.ContextScope;
+
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -17,15 +23,16 @@ import dagger.Provides;
 @Module
 public class AppModule {
 
-    private final Context mAppContext;
-
-    public AppModule(Context context) {
-        this.mAppContext = context;
+    @Provides
+    @Singleton
+    @ContextScope(DiConfig.CONTEXT_SCOPE_APP)
+    Context provideAppContext() {
+        return BasicApp.getAppContext();
     }
 
-    @Named("AppContext")
+    @Singleton
     @Provides
-    public Context provideContext() {
-        return mAppContext;
+    Application provideApplication() {
+        return BasicApp.getAppContext();
     }
 }

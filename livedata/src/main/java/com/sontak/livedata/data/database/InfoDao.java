@@ -1,4 +1,4 @@
-package com.sontak.livedata.database;
+package com.sontak.livedata.data.database;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
@@ -11,7 +11,7 @@ import java.util.List;
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 
 /**
- * @package: com.sontak.livedata.database
+ * @package: com.sontak.livedata.data.database
  * @author: Lei
  * @date: 2018-01-01 22:19
  * @version: V1.0.0
