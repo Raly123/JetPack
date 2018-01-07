@@ -1,4 +1,4 @@
-package com.sontak.livedata.ui.base;
+package com.sontak.livedata.view.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,6 +1,6 @@
-package com.sontak.livedata.ui.activity;
+package com.sontak.livedata.view.activity;
 
-import com.sontak.livedata.ui.base.BaseActivity;
+import com.sontak.livedata.view.base.BaseActivity;
 
 /**
  * @package: com.sontak.livedata.ui.activity

@@ -1,4 +1,4 @@
-package com.sontak.livedata.ui.base;
+package com.sontak.livedata.view.base;
 
 /**
  * @package: com.sontak.livedata.ui.base
